@@ -11,12 +11,12 @@ public class ServiceUser {
     @Autowired
     UserRepository userRepo;
 
-    public User getUserByMyId(String id){
+    public User getUserByLoginAndPassword(String login, String password){
 
-      // return this.userRepo.findById(Long.valueOf(id)).orElseThrow();
-        User us = new User();
-        us.setPrenom("Nicolas");
+        User us = userRepo.findByLoginAndPassword(login, password).orElseThrow();
+
         return us;
+
     }
 
 }
