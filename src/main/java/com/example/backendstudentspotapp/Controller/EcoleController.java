@@ -16,12 +16,12 @@ public class EcoleController {
     @Autowired
     ServiceEcole serviceEcole;
 
-    @GetMapping("/ecoles/{id_groupe}")
-    public Optional<Ecole> getEcolesByIdGroupe(@PathVariable Long id_groupe) {
+    @GetMapping("/getEcoleByIdGroupe")
+    public Optional<Ecole> getEcoleById_groupe(@PathVariable Long id_groupe) {
 
         System.out.println("Group received : " + id_groupe);
 
-        return serviceEcole.getEcolesByIdGroupe(id_groupe);
+        return serviceEcole.getEcoleById_groupe(id_groupe);
 
     }
 }
