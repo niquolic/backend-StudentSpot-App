@@ -14,5 +14,6 @@ public class Ecole {
     private String nom_ecole;
     private String ville_ecole;
     private String adresse_ecole;
-    private Long id_groupe;
+    @Column(name = "id_groupe")
+    private Long groupe;
 }
