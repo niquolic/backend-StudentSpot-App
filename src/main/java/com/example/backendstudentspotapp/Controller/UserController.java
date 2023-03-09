@@ -14,12 +14,12 @@ public class UserController {
     ServiceUser serviceUser;
 
     @GetMapping("/getUserByLoginAndPassword")
-    public String getUserByLoginAndPassword(@RequestParam() String login, @RequestParam() String password){
+    public User getUserByLoginAndPassword(@RequestParam() String login, @RequestParam() String password){
 
         System.out.println("User received : " + login + " " + password);
         User user = serviceUser.getUserByLoginAndPassword(login, password);
 
-        return "Le nom de mon user est:" + user.getPrenom() + " " + user.getNom();
+        return serviceUser.getUserByLoginAndPassword(login, password);
 
     }
 
