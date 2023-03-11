@@ -1,11 +1,11 @@
-package com.example.backendstudentspotapp.Entities;
+package com.example.backendstudentspotapp.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name = "utilisateur")
-public class User {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

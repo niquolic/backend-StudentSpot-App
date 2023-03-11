@@ -1,7 +1,7 @@
-package com.example.backendstudentspotapp.Controller;
+package com.example.backendstudentspotapp.controller;
 
-import com.example.backendstudentspotapp.Entities.User;
-import com.example.backendstudentspotapp.ServiceUser;
+import com.example.backendstudentspotapp.entities.UserEntity;
+import com.example.backendstudentspotapp.service.ServiceUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,10 +14,9 @@ public class UserController {
     ServiceUser serviceUser;
 
     @GetMapping("/getUserByLoginAndPassword")
-    public User getUserByLoginAndPassword(@RequestParam() String login, @RequestParam() String password){
+    public UserEntity getUserByLoginAndPassword(@RequestParam() String login, @RequestParam() String password){
 
         System.out.println("User received : " + login + " " + password);
-        User user = serviceUser.getUserByLoginAndPassword(login, password);
 
         return serviceUser.getUserByLoginAndPassword(login, password);
 
